@@ -83,9 +83,9 @@ do
 	fi
 
 	# after firing this instance off, its save to leave our credentials for the later ones...
-  # but... for those who don't want/need/use full meshed, let's drop a random number of connections:
+  	# but... for those who don't want/need/use full meshed, let's drop a random number of connections:
 	if [ "$((RANDOM%100+1))" -lt "$mesh_percentage" ]; then   # only $mesh_percentage from 100 come through
-  	# create a growing bind-list for each node connecting to each other yet started
-  	c=$c$(echo "\"$my_own_ip:$bindport\": {\"peerName\":\"$nodename\", \"password\": \"$bindpassword\", \"publicKey\": \"$publickey\"},")
+  		# create a growing bind-list for each node connecting to each other yet started
+  		c=$c$(echo "\"$my_own_ip:$bindport\": {\"peerName\":\"$nodename\", \"password\": \"$bindpassword\", \"publicKey\": \"$publickey\"},")
 	fi
 done
