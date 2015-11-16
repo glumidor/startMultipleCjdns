@@ -1,0 +1,14 @@
+you started (a monster) bunch of cjdroutes?
+with the wrong config? forgot something?
+here's how to ger rid of it:
+
+pgrep cjd
+
+shows a (huge) list of process id's. all related to cjdroute
+
+take this list and kill every pid from it:
+
+pgrep cjd | xargs kill
+
+voila
+
