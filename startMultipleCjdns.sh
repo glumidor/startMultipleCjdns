@@ -80,10 +80,6 @@ do
 	else
 		$cjdns_path/cjdroute < $file 
 		sleep 2
-		echo
-		$cjdns_path/contrib/python/peerStats
-		echo
-		echo
 	fi
 
 	# after firing this instance off, its save to leave our credentials for the later ones...
